@@ -1,1 +1,1 @@
-# js_musicplayer
+# js_musicPlayer
