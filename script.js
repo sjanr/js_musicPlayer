@@ -12,7 +12,7 @@ const cover = document.querySelector('#cover')
 const songs = ['hey', 'summer', 'ukulele']
 
 // Keep track of songs
-let songIndex = 2 //this makes 'ukelele' the default song to play
+let songIndex = 2 //this makes 'ukulele' the default song to play
 
 // Initially load song info DOM
 loadSong(songs[songIndex])
