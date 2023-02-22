@@ -20,8 +20,8 @@ loadSong(songs[songIndex])
 // Update song details
 function loadSong(song) {
     title.innerText = song
-    audio.src = 'music/${song}.mp3'
-    cover.src = 'images/${song}.jpg'
+    audio.src = `music/${song}.mp3`
+    cover.src = `images/${song}.jpg`
 }
 
 function playSong() {
@@ -67,7 +67,7 @@ function nextSong() {
 function updateProgress(e) {
     const {duration, currentTime} = e.srcElement
     const progressPercent = (currentTime / duration) * 100
-    progress.style.width = '${progressPercent}%'
+    progress.style.width = `${progressPercent}%`
 
 }
 
