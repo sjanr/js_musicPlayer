@@ -9,7 +9,7 @@ const title = document.querySelector('#title')
 const cover = document.querySelector('#cover')
 
 // Song titles
-const songs = ['hey', 'summer', 'ukulele']
+const songs = ['Hey - unknown artist', 'Summer - unknown artist', 'Ukulele - unknown artist']
 
 // Keep track of songs
 let songIndex = 2 //this makes 'ukulele' the default song to play
@@ -71,6 +71,13 @@ function updateProgress(e) {
 
 }
 
+function setProgress(e) {
+    const width = this.clientWidth
+    const click = e.offsetX
+    const duration = audio.duration
+    audio.currentTime = (click/width) * duration
+}
+
 
 // Event listeners
 playBtn.addEventListener('click', () => {
@@ -88,5 +95,9 @@ prevBtn.addEventListener('click', prevSong)
 nextBtn.addEventListener('click', nextSong)
 
 audio.addEventListener('timeupdate', updateProgress)
+
+progressContainer.addEventListener('click', setProgress)
+
+audio.addEventListener('ended', nextSong)
 
 
